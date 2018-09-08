@@ -1,0 +1,12 @@
+parameters:
+    meraki_username: #~meraki login username
+    meraki_password: #~meraki login password
+    mailer_transport: #smtp
+    mailer_host: #email-smtp.us-east-1.amazonaws.com
+    mailer_from: #~user email address#
+    mailer_username: #~user amazonaws username#
+    mailer_password: #~user amazonaws password#
+    mailer_port: #~amazonaws port number#
+    mailer_subject: #~ email subject
+    jdbc_driver: #org.sqlite.JDBC
+    report_now_range: #~time range for report query#

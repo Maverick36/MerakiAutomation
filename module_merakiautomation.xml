@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_merakiautomation" default="compile.module.merakiautomation">
+  <dirname property="module.merakiautomation.basedir" file="${ant.file.module_merakiautomation}"/>
+  
+  <property name="module.jdk.home.merakiautomation" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.merakiautomation" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.merakiautomation" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.merakiautomation" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="merakiautomation.output.dir" value="${module.merakiautomation.basedir}/out/production/MerakiAutomation"/>
+  <property name="merakiautomation.testoutput.dir" value="${module.merakiautomation.basedir}/out/test/MerakiAutomation"/>
+  
+  <path id="merakiautomation.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="merakiautomation.module.production.classpath">
+    <path refid="${module.jdk.classpath.merakiautomation}"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-server-standalone-2.48.2.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-2.48.2/libs/xml-apis-1.4.01.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-2.48.2/selenium-java-2.48.2.jar"/>
+    <pathelement location="${basedir}/../../Library/Preferences/IntelliJIdea15/jdbc-drivers/sqlite-jdbc-3.8.9.jar"/>
+    <pathelement location="${basedir}/../../Downloads/freemarker-2.3.23/freemarker.jar"/>
+    <pathelement location="${basedir}/../../Downloads/javax.mail.jar"/>
+    <pathelement location="${basedir}/../../Downloads/javax.mail-1.5.0.jar"/>
+    <pathelement location="${basedir}/../../Downloads/smtp-1.5.0.jar"/>
+    <pathelement location="${basedir}/../../Downloads/activation-2.2.1.jar"/>
+    <pathelement location="${basedir}/../../Downloads/commons-email-1.4/commons-email-1.4.jar"/>
+    <pathelement location="${basedir}/../../Downloads/snakeyaml-1.16.jar"/>
+  </path>
+  
+  <path id="merakiautomation.runtime.production.module.classpath">
+    <pathelement location="${merakiautomation.output.dir}"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-server-standalone-2.48.2.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-2.48.2/libs/xml-apis-1.4.01.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-2.48.2/selenium-java-2.48.2.jar"/>
+    <pathelement location="${basedir}/../../Library/Preferences/IntelliJIdea15/jdbc-drivers/sqlite-jdbc-3.8.9.jar"/>
+    <pathelement location="${basedir}/../../Downloads/freemarker-2.3.23/freemarker.jar"/>
+    <pathelement location="${basedir}/../../Downloads/javax.mail.jar"/>
+    <pathelement location="${basedir}/../../Downloads/javax.mail-1.5.0.jar"/>
+    <pathelement location="${basedir}/../../Downloads/smtp-1.5.0.jar"/>
+    <pathelement location="${basedir}/../../Downloads/activation-2.2.1.jar"/>
+    <pathelement location="${basedir}/../../Downloads/commons-email-1.4/commons-email-1.4.jar"/>
+    <pathelement location="${basedir}/../../Downloads/snakeyaml-1.16.jar"/>
+  </path>
+  
+  <path id="merakiautomation.module.classpath">
+    <path refid="${module.jdk.classpath.merakiautomation}"/>
+    <pathelement location="${merakiautomation.output.dir}"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-server-standalone-2.48.2.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-2.48.2/libs/xml-apis-1.4.01.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-2.48.2/selenium-java-2.48.2.jar"/>
+    <pathelement location="${basedir}/../../Library/Preferences/IntelliJIdea15/jdbc-drivers/sqlite-jdbc-3.8.9.jar"/>
+    <pathelement location="${basedir}/../../Downloads/freemarker-2.3.23/freemarker.jar"/>
+    <pathelement location="${basedir}/../../Downloads/javax.mail.jar"/>
+    <pathelement location="${basedir}/../../Downloads/javax.mail-1.5.0.jar"/>
+    <pathelement location="${basedir}/../../Downloads/smtp-1.5.0.jar"/>
+    <pathelement location="${basedir}/../../Downloads/activation-2.2.1.jar"/>
+    <pathelement location="${basedir}/../../Downloads/commons-email-1.4/commons-email-1.4.jar"/>
+    <pathelement location="${basedir}/../../Downloads/snakeyaml-1.16.jar"/>
+  </path>
+  
+  <path id="merakiautomation.runtime.module.classpath">
+    <pathelement location="${merakiautomation.testoutput.dir}"/>
+    <pathelement location="${merakiautomation.output.dir}"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-server-standalone-2.48.2.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-2.48.2/libs/xml-apis-1.4.01.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-2.48.2/selenium-java-2.48.2.jar"/>
+    <pathelement location="${basedir}/../../Library/Preferences/IntelliJIdea15/jdbc-drivers/sqlite-jdbc-3.8.9.jar"/>
+    <pathelement location="${basedir}/../../Downloads/freemarker-2.3.23/freemarker.jar"/>
+    <pathelement location="${basedir}/../../Downloads/javax.mail.jar"/>
+    <pathelement location="${basedir}/../../Downloads/javax.mail-1.5.0.jar"/>
+    <pathelement location="${basedir}/../../Downloads/smtp-1.5.0.jar"/>
+    <pathelement location="${basedir}/../../Downloads/activation-2.2.1.jar"/>
+    <pathelement location="${basedir}/../../Downloads/commons-email-1.4/commons-email-1.4.jar"/>
+    <pathelement location="${basedir}/../../Downloads/snakeyaml-1.16.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.merakiautomation">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.merakiautomation">
+    <patternset refid="excluded.from.module.merakiautomation"/>
+  </patternset>
+  
+  <path id="merakiautomation.module.sourcepath">
+    <dirset dir="${module.merakiautomation.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.merakiautomation" depends="compile.module.merakiautomation.production,compile.module.merakiautomation.tests" description="Compile module MerakiAutomation"/>
+  
+  <target name="compile.module.merakiautomation.production" depends="register.custom.compilers" description="Compile module MerakiAutomation; production classes">
+    <mkdir dir="${merakiautomation.output.dir}"/>
+    <javac2 destdir="${merakiautomation.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.merakiautomation}/javac">
+      <compilerarg line="${compiler.args.merakiautomation}"/>
+      <bootclasspath refid="merakiautomation.module.bootclasspath"/>
+      <classpath refid="merakiautomation.module.production.classpath"/>
+      <src refid="merakiautomation.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.merakiautomation"/>
+    </javac2>
+    
+    <copy todir="${merakiautomation.output.dir}">
+      <fileset dir="${module.merakiautomation.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.merakiautomation.tests" depends="register.custom.compilers,compile.module.merakiautomation.production" description="compile module MerakiAutomation; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.merakiautomation" description="cleanup module">
+    <delete dir="${merakiautomation.output.dir}"/>
+    <delete dir="${merakiautomation.testoutput.dir}"/>
+  </target>
+</project>
